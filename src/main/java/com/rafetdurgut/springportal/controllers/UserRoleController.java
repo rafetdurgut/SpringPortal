@@ -1,8 +1,7 @@
-package com.example.springsecurity.controllers;
+package com.rafetdurgut.springportal.controllers;
 
-import com.example.springsecurity.models.UserRole;
-import com.example.springsecurity.repos.UserRoleRepository;
-import com.example.springsecurity.services.UserRoleService;
+import com.rafetdurgut.springportal.models.UserRole;
+import com.rafetdurgut.springportal.services.UserRoleService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.annotation.Secured;

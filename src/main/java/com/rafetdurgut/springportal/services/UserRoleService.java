@@ -1,7 +1,7 @@
-package com.example.springsecurity.services;
+package com.rafetdurgut.springportal.services;
 
-import com.example.springsecurity.models.UserRole;
-import com.example.springsecurity.repos.UserRoleRepository;
+import com.rafetdurgut.springportal.models.UserRole;
+import com.rafetdurgut.springportal.repos.UserRoleRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

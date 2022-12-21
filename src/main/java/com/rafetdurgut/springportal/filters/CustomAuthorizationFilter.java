@@ -1,7 +1,7 @@
-package com.example.springsecurity.filters;
+package com.rafetdurgut.springportal.filters;
 
-import com.example.springsecurity.services.JWToken;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.rafetdurgut.springportal.services.JWToken;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
@@ -14,9 +14,8 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import static java.util.Arrays.stream;
-import static org.springframework.http.HttpStatus.FORBIDDEN;
 import static org.springframework.http.HttpHeaders.AUTHORIZATION;
+import static org.springframework.http.HttpStatus.FORBIDDEN;
 import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
 
 @Slf4j

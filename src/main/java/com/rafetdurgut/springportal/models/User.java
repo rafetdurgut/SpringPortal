@@ -1,4 +1,4 @@
-package com.example.springsecurity.models;
+package com.rafetdurgut.springportal.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

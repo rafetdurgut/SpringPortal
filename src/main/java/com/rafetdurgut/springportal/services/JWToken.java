@@ -1,4 +1,4 @@
-package com.example.springsecurity.services;
+package com.rafetdurgut.springportal.services;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;

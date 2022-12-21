@@ -1,10 +1,9 @@
-package com.example.springsecurity.services;
+package com.rafetdurgut.springportal.services;
 
-import com.example.springsecurity.models.User;
-import com.example.springsecurity.models.UserRole;
-import com.example.springsecurity.repos.UserRepository;
-import com.example.springsecurity.repos.UserRoleRepository;
-import lombok.AllArgsConstructor;
+import com.rafetdurgut.springportal.models.User;
+import com.rafetdurgut.springportal.models.UserRole;
+import com.rafetdurgut.springportal.repos.UserRepository;
+import com.rafetdurgut.springportal.repos.UserRoleRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

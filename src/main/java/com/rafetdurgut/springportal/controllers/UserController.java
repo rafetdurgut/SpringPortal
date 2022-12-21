@@ -1,8 +1,10 @@
-package com.example.springsecurity.controllers;
+package com.rafetdurgut.springportal.controllers;
 
-import com.example.springsecurity.models.User;
-import com.example.springsecurity.services.UserRoleService;
-import com.example.springsecurity.services.UserService;
+import com.rafetdurgut.springportal.models.Post;
+import com.rafetdurgut.springportal.models.User;
+import com.rafetdurgut.springportal.services.PostService;
+import com.rafetdurgut.springportal.services.UserRoleService;
+import com.rafetdurgut.springportal.services.UserService;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -17,8 +19,7 @@ import java.net.URI;
 @RequiredArgsConstructor
 public class UserController {
     private final UserService userService;
-    private final UserRoleService userRoleService;
-//    public final TodoListService todoListService;
+    public final PostService postService;
 
     @GetMapping("/users")
     public ResponseEntity<?> getAllUsers()
@@ -42,14 +43,13 @@ public class UserController {
         return ResponseEntity.ok("Successful!");
     }
 
-//    @Secured("ROLE_ADMIN")
-//    @PostMapping("/users/{id}/todos")
-//    @ResponseBody
-//    public ResponseEntity<TodoList> addTodo(@PathVariable Long id, @RequestBody TodoList todoList)
-//    {
-//        todoList.setUser(userService.getUserById(id));
-//        return new ResponseEntity(todoListService.addTodoList(todoList), HttpStatus.CREATED);
-//    }
+    @Secured("ROLE_ADMIN")
+    @PostMapping("/users/{id}/posts")
+    public ResponseEntity<Post> addPost(@PathVariable Long id, @RequestBody Post post){
+        post.setUser( userService.getUserById(id) );
+        Post added = postService.addPost(post);
+        return new ResponseEntity(added, HttpStatus.CREATED);
+    }
 }
 @Data
 class UserRoleForm

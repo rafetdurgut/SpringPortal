@@ -1,7 +1,7 @@
-package com.example.springsecurity.security;
+package com.rafetdurgut.springportal.security;
 
-import com.example.springsecurity.filters.CustomAuthenticationFilter;
-import com.example.springsecurity.filters.CustomAuthorizationFilter;
+import com.rafetdurgut.springportal.filters.CustomAuthenticationFilter;
+import com.rafetdurgut.springportal.filters.CustomAuthorizationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -35,6 +35,8 @@ public class SecurityConfiguration {
                 .antMatchers("/h2-console/**").permitAll();;
 
         http.authorizeRequests().antMatchers(HttpMethod.GET, "/login").permitAll();
+        http.authorizeRequests().antMatchers(HttpMethod.GET, "/posts").permitAll();
+
         http.authorizeRequests().antMatchers(HttpMethod.GET, "/users/**").hasAnyAuthority("ROLE_USER");
         http.authorizeRequests().antMatchers(HttpMethod.POST, "/users/**").hasAnyAuthority("ROLE_ADMIN");
 

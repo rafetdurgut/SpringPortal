@@ -1,6 +1,6 @@
-package com.example.springsecurity.repos;
+package com.rafetdurgut.springportal.repos;
 
-import com.example.springsecurity.models.User;
+import com.rafetdurgut.springportal.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
