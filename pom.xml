@@ -41,9 +41,13 @@
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>runtime</scope>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.cloud.sql</groupId>
+            <artifactId>mysql-socket-factory-connector-j-8</artifactId>
+            <version>1.8.0</version>
         </dependency>
         <dependency>
             <groupId>com.auth0</groupId>
@@ -70,6 +74,15 @@
 
     <build>
         <plugins>
+            <plugin>
+            <groupId>com.google.cloud.tools</groupId>
+            <artifactId>appengine-maven-plugin</artifactId>
+            <version>2.2.0</version>
+            <configuration>
+                <version>1</version>
+                <projectId>GCLOUD_CONFIG</projectId>
+            </configuration>
+        </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

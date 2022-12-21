@@ -50,6 +50,10 @@ public class UserController {
         Post added = postService.addPost(post);
         return new ResponseEntity(added, HttpStatus.CREATED);
     }
+    @GetMapping("/users/{id}/posts")
+    public ResponseEntity<Post> getPosts(@PathVariable Long id){
+        return new ResponseEntity(postService.getAllPostByUserId(id), HttpStatus.OK);
+    }
 }
 @Data
 class UserRoleForm
